@@ -1,0 +1,41 @@
+.footer__container{
+    width: 100%;
+    height: max-content;
+    background-color: #ff0000;
+}
+.footer__content{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding : 10px !important;
+
+}
+.footer__content h1{
+    font-size: 1.5rem;
+    color: #fff;
+}
+.footer__content p {
+    text-decoration: none;
+    color: #fff;
+    font-size:14px;
+    font-weight: 500;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.footer__content p a{
+    text-decoration: none;
+    color: #000000;
+    font-size:16px;
+    font-weight: 500;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 5px;
+}
+.footer__content p a svg{
+    font-size: 1.5rem;
+    color: #000000;
+}
