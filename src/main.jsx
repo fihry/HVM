@@ -7,7 +7,7 @@ const root = createRoot(document.getElementById("root"));
 
 root.render(
   <BrowserRouter basename="/HVM">
-    <App />
+    <App/>
   </BrowserRouter>
 )
 
