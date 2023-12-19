@@ -1,4 +1,3 @@
-import React from 'react'
 import "./navebar.css";
 import { CiSearch } from "react-icons/ci";
 export default function serchform() {

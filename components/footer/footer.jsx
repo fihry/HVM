@@ -1,6 +1,4 @@
-import React from 'react'
 import { IoLogoGithub } from "react-icons/io5";
-
 import './footer.css'
 export default function footer() {
   return (

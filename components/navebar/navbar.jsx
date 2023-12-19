@@ -1,7 +1,7 @@
 // Date: 2021/8/8
 import './navebar.css';
+import { Link } from 'react-router-dom';
 import Serchform from './serchform.jsx';
-
 export default function Navbar() {
 
 
@@ -14,29 +14,29 @@ export default function Navbar() {
           </li>
           <li>Movies
             <ol>
-              <li>Action</li>
-              <li>Comedy</li>
-              <li>Drama</li>
-              <li>Horror</li>
-              <li>Thriller</li>
+              <li><Link to="/Movies/Action">Action</Link></li>
+              <li><Link to="/Movies/Comedy">Comedy</Link></li>
+              <li><Link to="/Movies/Drama">Drama</Link></li>
+              <li><Link to="/Movies/Horror">Horror</Link></li>
+              <li><Link to="/Movies/Thriller">Thriller</Link></li>
             </ol>
           </li>
           <li>Series
             <ol>
-              <li>Drama Series</li>
-              <li>Comedy Series</li>
-              <li>Thriller Series</li>
-              <li>Romance Series</li>
+              <li><Link to="/Series/Drama">Drama </Link></li>
+              <li><Link to="/Series/Comedy">Comedy </Link></li>
+              <li><Link to="/Series/Thriller">Thriller </Link></li>
+              <li><Link to="/Series/Romance">Romance </Link></li>
             </ol>
           </li>
           <li>Anime
             <ol>
-              <li>Shounen</li>
-              <li>Shoujo</li>
-              <li>Seinen</li>
-              <li>Horror</li>
-              <li>Sports</li>
-              <li>Mystery</li>
+              <li><Link to="/Anime/Shounen">Shounen</Link></li>
+              <li><Link to="/Anime/Shoujo">Shoujo</Link></li>
+              <li><Link to="/Anime/Seinen"></Link></li>
+              <li><Link to="/Anime/Horror">Horror</Link></li>
+              <li><Link to="/Anime/Sports">Sports</Link></li>
+              <li><Link to="/Anime/Mystery">Mystery</Link></li>
             </ol>
           </li>
         </ul>
@@ -62,8 +62,9 @@ export default function Navbar() {
           </label>
         </span>
       </nav>
-      <Serchform />
+      <Serchform/>
     </div>
   );
+  
 }
 

@@ -1,6 +1,13 @@
-import {Pagination } from '@mantine/core';
-import './pagination.css';
-export default function pagination() {
-  return (
-<Pagination total={1}  boundaries={2} defaultValue={5}  />
-);}
+import { useState } from 'react';
+export default function Pagination() {
+  const [Page,setPage]=useState(0);
+  const addnb=()=>{setPage(Page+1)}
+  const rmvnb=()=>{setPage(Page-1)}
+  return(
+   <div style={{display:'flex',justifyContent:'center',alignItems:'center'}}>
+   <button onClick={addnb}>__ + __</button>
+   <h1>{Page}</h1>
+   <button onClick={rmvnb}>__ - __</button>
+   </div>
+  )
+}
