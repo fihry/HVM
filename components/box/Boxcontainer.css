@@ -1,125 +1,180 @@
-.box{
-    position: relative;
-    width: 100% !important;
-    height:max-content;
-    background-color: #e4e4e4;
-    padding: 10px;
-    display: grid;
-    justify-self: center;
-    align-self: center;
-    grid-template-columns: repeat(5,1fr);
-    gap: 10px;
-    border-radius: 5px 5px 0px 0px;
+.box {
+  position: relative;
+  width: 100% !important;
+  height: max-content;
+  background-color: #e4e4e4;
+  padding: 10px;
+  display: grid;
+  justify-self: center;
+  align-self: center;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 10px;
+  border-radius: 5px 5px 0px 0px;
 }
+
 .Box__item {
-    position: relative;
-    overflow: hidden;
-    height: 300px !important;
-    min-height: 300px !important;
-    border-radius: 5px;
-    border: 1px solid #ddd;
-    box-shadow: 1px 2px 3px #313131;
-    text-align: center;
-    cursor: pointer;
-    border-radius: 8px;
-    color: #000000;
+  position: relative;
+  overflow: hidden;
+  height: 300px !important;
+  min-height: 300px !important;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  box-shadow: 1px 2px 3px #313131;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 8px;
+  color: #000000;
+}
+
+.Box__item:hover {
+  background-color: #000000;
+  color: #ffffff;
+  transition: all 0.5s ease;
+}
+
+.Box__item .rate {
+  width: 70px;
+  height: 40px;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.455);
+  border: 1px solid #ddd;
+  box-shadow: 1px 2px 3px #b4b4b4;
+  color: #ffdd00;
+  font-weight: 800;
+  font-size: 20px;
+  border-radius: 5px;
+  z-index: 11;
+}
+
+.Box__item:hover .rate {
+  top: -100%;
+  transition: all 0.5s ease;
+}
+
+.Box__item .rate svg {
+  font-size: smaller !important;
+  stroke-width: 2;
+  color: gold;
+}
+
+.Box__item__info .detailes {
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  color: #ffffff;
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+  font-size: medium;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  transition: all 0.5s ease;
+  overflow: scroll;
+}
+
+.Box__item__info .detailes::-webkit-scrollbar {
+  width: 0px;
+  height: 0px;
+}
+
+.Box__item__info .detailes h4 {
+  font-size: 18px;
+  text-overflow: clip;
+}
+
+.Box__item__info .detailes span {
+  min-width: 80%;
+  background-color: gold;
+  border-radius: 15px;
+  text-align: center !important;
+  justify-content: center;
+  align-items: center;
+  padding: 5px 8px;
+  font-size: 14px;
+  color: #000;
+  scale: 0.8;
+}
+
+.Box__item:hover.Box__item img {
+  opacity: 0.3;
+  scale: 0.9;
+  transition: all 0.5s ease;
+}
+
+.Box__item:hover .Box__item__info .detailes {
+  position: absolute;
+  opacity: 1;
+  top: 0;
+  color: #ffffff;
+  z-index: 10;
+  transition: all 0.5s ease;
+}
+
+.Box__item p {
+  font-size: small;
+  font-weight: 500;
+  overflow: scroll;
+  margin: 5px;
+}
+
+.Box__item p::-webkit-scrollbar {
+  width: 0px;
+  height: 0px;
+}
+
+.Box__item img {
+  height: 100%;
+  width: 100%;
+  border-radius: 5px;
+}
+
+@media screen and (max-width: 767px) {
+  .box {
+    grid-template-columns: repeat(3, 1fr);
   }
-  .Box__item:hover {
-    background-color: #000000;
-    color: #ffffff;
-    transition: all 0.5s ease;
-  }
-  .Box__item .rate{
-      width: 70px;
-      height: 40px;
-      justify-content: center;
-      position: absolute;
-      top: 0;
-      background-color: rgba(0, 0, 0, 0.455);
-      border: 1px solid #ddd;
-      box-shadow: 1px  2px 3px  #b4b4b4;
-      color: #ffdd00;
-      font-weight: 800;
-      font-size: 20px;
-      border-radius: 5px;
-      z-index: 11;
-  }
-  .Box__item:hover .rate{
-      top: -100%;
-      transition: all 0.5s ease;
-  }
-  .Box__item .rate svg{
-     font-size:smaller !important; 
-     stroke-width: 2;
-     color: gold;
-  }
-  .Box__item__info .detailes {
-    position: absolute;
-    opacity: 0;
-    top: 0;
-    color: #ffffff;
-    z-index: 10;
-    width: 100%;
-    height: 100%;
-    font-size: medium;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-      align-items: center;
-    padding: 10px;
-    transition: all 0.5s ease;
-    overflow: scroll;
-  }
-  .Box__item__info .detailes::-webkit-scrollbar {
-    width: 0px;
-    height: 0px;
-  }
-  .Box__item__info .detailes h4 {
-      font-size: 18px;
-      text-overflow: clip;
-  }
-  .Box__item__info .detailes span{
-      min-width: 80%;
-      background-color: gold;
-      border-radius: 15px;
-      text-align: center !important;
-      justify-content: center;
-      align-items: center;
-      padding: 5px 8px;
-      font-size: 14px;
-      color: #000;
-      scale: 0.8;
-  }
-  .Box__item:hover.Box__item img {
-    opacity: 0.3;
-    scale: 0.9;
-    transition: all 0.5s ease;
-  }
-  .Box__item:hover .Box__item__info .detailes {
-    position: absolute;
-    opacity: 1;
-    top: 0;
-    color: #ffffff;
-    z-index: 10;
-    transition: all 0.5s ease;
-  }
-  .Box__item p {
-    font-size: small;
-    font-weight: 500;
-    overflow: scroll;
-    margin: 5px;
-  }
-  .Box__item p::-webkit-scrollbar {
-    width: 0px;
-    height: 0px;
-  }
-  .Box__item img {
-    height: 100%;
-    width: 100%;
-    border-radius: 5px;
-  }
-@media screen and (max-width: 767px){
-    .box{
-        grid-template-columns: repeat(3,1fr);
-    }  
+}
+
+.pagination {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fffffff0;
+  box-shadow: blur(10px);
+}
+
+.pagination div nav {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pagination nav ul  {
+  display: flex;
+  flex-wrap: nowrap;
+  background-color: none;
+  justify-content: center;
+  position: static;
+  padding: 10px;
+
+}
+.pagination nav ul li {
+  background-color:none;
+  padding: none;
+}
+.pagination nav ul li:hover{
+  background: none;
+}
+.pagination nav ul li button{
+  background-color: #ffdd00;
+  color: #000000;
+  font-size: 15px;
+  box-shadow: 1px 1px 2px #fff;
 }

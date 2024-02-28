@@ -1,13 +1,18 @@
-import { useState } from 'react';
-export default function Pagination() {
-  const [Page,setPage]=useState(0);
-  const addnb=()=>{setPage(Page+1)}
-  const rmvnb=()=>{setPage(Page-1)}
-  return(
-   <div style={{display:'flex',justifyContent:'center',alignItems:'center'}}>
-   <button onClick={addnb}>__ + __</button>
-   <h1>{Page}</h1>
-   <button onClick={rmvnb}>__ - __</button>
-   </div>
-  )
-}
+// Pagination.js
+import React from 'react';
+import MuiPagination from '@mui/material/Pagination';
+
+const Pagination = ({ totalPages, currentPage, onPageChange }) => {
+  const handlePageChange = (event, value) => {
+    onPageChange(value);
+  };
+
+  return (
+    <div>
+      {/* Render pagination buttons */}
+      <MuiPagination count={totalPages} page={currentPage} onChange={handlePageChange} />
+    </div>
+  );
+};
+
+export default Pagination;
